@@ -2,14 +2,14 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-COPY package.json /app
-COPY pnpm-lock.yaml /app
+COPY package.json ./
+COPY pnpm-lock.yaml ./
 
 RUN npm install -g pnpm
 
 RUN pnpm install
 
-COPY . /app
+COPY . .
 
 RUN pnpm build
 
