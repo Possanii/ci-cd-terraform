@@ -9,7 +9,7 @@ RUN npm install -g pnpm
 
 RUN pnpm install
 
-COPY . .
+COPY . /app
 
 RUN pnpm build
 
